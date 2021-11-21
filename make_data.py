@@ -1,9 +1,12 @@
-import datetime
+import neurokit2 as nk
 
-import pandas as pd
+emb = nk.complexity_embedding(
+    "clifford",
+    sampling_rate=1000,
+    a=d.second,
+    b=d.minute,
+    c=1.9,
+    d=-1.1,
+)
 
-d = datetime.datetime.now()
-d.year
-d.second
-
-pd.DataFrame({"A": [d.minute] * 3, "B": [d.second] * 3}).to_csv("data.csv", index=False)
+emb.to_csv("data.csv", index=False)

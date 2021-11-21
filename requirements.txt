@@ -1,1 +1,2 @@
 pandas
+https://github.com/neuropsychology/neurokit/zipball/dev
