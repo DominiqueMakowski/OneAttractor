@@ -1,3 +1,9 @@
+import datetime
+
 import pandas as pd
 
-pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6]}).to_csv("data.csv", index=False)
+d = datetime.datetime.now()
+d.year
+d.second
+
+pd.DataFrame({"A": [d.minute] * 3, "B": [d.second] * 3}).to_csv("data.csv", index=False)
