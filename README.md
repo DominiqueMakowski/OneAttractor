@@ -6,3 +6,5 @@ This repository simply creates a unique [attractor graph](https://dominiquemakow
 
 
 ![](attractor_points.png)
+
+![](attractor_density.png)

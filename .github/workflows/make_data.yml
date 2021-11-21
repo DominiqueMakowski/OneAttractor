@@ -23,10 +23,10 @@ jobs:
       - name: Make data
         run: python make_data.py
       - name: Install R dependencies
-        run: Rscript -e 'install.packages(c("ggplot2"), dependencies = TRUE)'
+        run: Rscript -e 'install.packages(c("ggplot2", "hexbin"), dependencies = TRUE)'
       - name: Make graph
         run: Rscript -e 'source("make_graph.R")'
       - name: Commit results
         run: |
-          git commit data.csv attractor_points.png -m 'create data' || echo "No changes to commit"
+          git commit attractor_points.png attractor_density.png -m 'create data' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
