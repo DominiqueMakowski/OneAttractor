@@ -12,7 +12,7 @@ p1 <- ggplot(data, aes(x=x, y=y)) +
 ggsave("attractor_points.png", p1, width=10, height=10, dpi=150)
 
 p2 <- ggplot(data, aes(x=x, y=y)) +
-  geom_hex(aes(colour = log(..count..), fill = log(..count..)), bins = 500) +
+  geom_hex(aes(colour = log(..count..), fill = log(..count..)), bins = 1000) +
   scale_fill_viridis_c(guide = "none", option = "inferno") +
   scale_colour_viridis_c(guide = "none", option = "inferno") +
   ggtitle(Sys.Date()) +
