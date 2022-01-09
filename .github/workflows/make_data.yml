@@ -28,5 +28,5 @@ jobs:
         run: Rscript -e 'source("make_graph.R")'
       - name: Commit results
         run: |
-          git commit attractor_points.png attractor_density.png -m 'Today's attractor is out! check-out https://github.com/DominiqueMakowski/OneAttractor' || echo "No changes to commit"
+          git commit attractor_points.png attractor_density.png -m 'A fresh attractor is out! check-out https://github.com/DominiqueMakowski/OneAttractor' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
